@@ -3,6 +3,8 @@ import { sign } from 'jsonwebtoken';
 
 import AuthConfig from '@config/auth';
 import AppError from '@shared/errors/AppError';
+import { inject, injectable } from 'tsyringe';
+
 import User from '../infra/typeorm/entities/user';
 import IUsersRepository from '../repositories/IUserRepository';
 
@@ -16,8 +18,12 @@ interface IResponse {
     token: string
 }
 
+@injectable()
 class AuthenticateUserService {
-  constructor(private userRepository: IUsersRepository) {}
+  constructor(
+      @inject('UserRepository')
+      private userRepository: IUsersRepository,
+  ) {}
 
   public async execute({ email, password }: IRequest): Promise<IResponse> {
     const user = await this.userRepository.findByEmail(email);

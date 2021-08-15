@@ -3,6 +3,7 @@ import fs from 'fs';
 
 import uploadConfig from '@config/upload';
 import AppError from '@shared/errors/AppError';
+import { inject, injectable } from 'tsyringe';
 import User from '../infra/typeorm/entities/user';
 import IUsersRepository from '../repositories/IUserRepository';
 
@@ -11,8 +12,12 @@ interface IRequest {
     avatarFileName: string
 }
 
+@injectable()
 class UpdateUserAvatarService {
-  constructor(private userRepository: IUsersRepository) {}
+  constructor(
+      @inject('UserRepository')
+      private userRepository: IUsersRepository,
+  ) {}
 
   public async execute({ user_id, avatarFileName }: IRequest): Promise<User> {
     const UserFind = await this.userRepository.findById(user_id);
