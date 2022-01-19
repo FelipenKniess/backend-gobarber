@@ -1,4 +1,6 @@
 # Gobarber Backend
+Aplicação criada no curso GoStack da Rocketseat. neste repositório, contém toda a parte do backend da aplicação. o repositório Frontend encontra-se em https://github.com/FelipenKniess/frontend-gobarber
+
 
 ## Requisítos Funcionais, não funcionais e regras de negócio
 
