@@ -2,7 +2,7 @@
 
 ## Requisítos Funcionais, não funcionais e regras de negócio
 
-### RECUPERAÇÃO DE SENHA
+### ``RECUPERAÇÃO DE SENHA``
 
 **RF**
 
@@ -21,7 +21,7 @@
 - O link enviado por email para resetar senha, deve expirar em 2h;
 - O usuário precisa confirmar a nvoa senha ao resetar sua senha;
 
-### Atualização do perfil
+### ``Atualização do perfil``
 
 **RF**
 - O usuário deve poder atualizar seu nome, email e senha
@@ -31,7 +31,7 @@
 - Para atualizar a senha, o usuário deve informar a senha antiga;
 - Para atualizar sua senha, o usuário precisa confiramr a nova senha;
 
-### Paneil do prestador
+### ``Painel do prestador``
 
 **RF**
 - O usuário deve poder lsitar seus agendaments de um dia específico;
@@ -46,7 +46,7 @@
 **RN**
 - A notificação deve ter um status de lida e não-lida para o prestados conseguir controlar;
 
-### Agendamento de serviços
+### ``Agendamento de serviços``
 
 **RF**
 - O usuário deve poder listar todos os prestadores de serviço cadastrados
